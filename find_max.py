@@ -8,7 +8,7 @@ def find_max(l):
         return l[0]
     else:
         if l[1] > l[0]:
-            l.insert(0, l[1])
+            l.remove(l[0])
         else:
             l.remove(l[1])
         find_max(l)
