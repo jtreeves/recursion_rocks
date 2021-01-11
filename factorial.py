@@ -4,8 +4,19 @@
 # This function returns the factorial of a given number.
 
 def factorial(n):
-    # Write code here
-    pass
+    if type(n) != int:
+        raise TypeError('Input needs to be a whole number')
+    elif n < 0:
+        raise ValueError('Number needs to be a whole number')
+    elif n == 0:
+        print(1)
+    elif n <= 2:
+        print(n)
+    else:
+        product = 1
+        for i in range(1, n + 1):
+            product *= i
+        print(product)
 
 # print(factorial(5))
 # => 120
