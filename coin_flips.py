@@ -7,12 +7,11 @@
 # Represent the two outcomes of each flip as "H" or "T"
 
 def coin_flips(n):
-    # Write code here
-    pass
+    return 2 ** n
 
-print(coinFlips(1)) 
+print(coin_flips(1)) 
 # => ["H", "T"]
-print(coinFlips(2)) 
+print(coin_flips(2)) 
 # => ["HH", "HT", "TH", "TT"]
-print(coinFlips(3)) 
+print(coin_flips(3)) 
 # => ["HHH", "HHT", "HTH", "HTT", "THH", "THT", "TTH", "TTT"]
