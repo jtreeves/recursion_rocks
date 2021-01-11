@@ -10,9 +10,9 @@ def coin_flips(n):
     options = 2 ** n
     totals = options * n
     letters = totals / 2
-    'H' * letters
-    'T' * letters
-
+    H_letters =  int(letters) * 'H'
+    T_letters =  int(letters) * 'T'
+    return H_Letters
 
 print(coin_flips(1)) 
 # => ["H", "T"]
