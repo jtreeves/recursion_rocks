@@ -11,7 +11,7 @@ def find_max(l):
             l.insert(0, l[1])
         else:
             l.remove(l[1])
-            find_max(l)
+        find_max(l)
 
 print(find_max([1, 4, 45, 6, -50, 10, 2]))
 # => 45
