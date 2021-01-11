@@ -10,8 +10,8 @@ def coin_flips(n):
     if n == 1:
         return ['H', 'T']
     flipped = coin_flips(n - 1)
-    history_plus_heads = list(map(lambda el: el + 'H', flipped))
-    history_plus_tails = list(map(lambda el: el + 'T', flipped))
+    history_plus_heads = list(map(lambda x: x + 'H', flipped))
+    history_plus_tails = list(map(lambda x: x + 'T', flipped))
     return history_plus_heads + history_plus_tails
 
 print(coin_flips(1)) 
