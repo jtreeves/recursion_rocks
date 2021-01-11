@@ -6,16 +6,13 @@
 def factorial(n):
     if type(n) != int:
         raise TypeError('Input needs to be a whole number')
-    elif n < 0:
-        raise ValueError('Number needs to be a whole number')
-    if n == 0:
+    product = 1
+    if n < 0:
+        return
+    elif n == 0:
         return 1
-    elif n <= 2:
-        return n
     else:
-        product = 1
-        for i in range(1, n + 1):
-            product *= i
+        product *= factorial(n - 1)
         return product
 
 print(factorial(0))
