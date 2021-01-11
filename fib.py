@@ -10,8 +10,7 @@ def fib(n):
         return 0
     elif n <= 2:
         return 1
-    else:
-        return fib(n - 1) + fib(n - 2)
+    return fib(n - 1) + fib(n - 2)
 
 print(fib(-1))
 # => 0
