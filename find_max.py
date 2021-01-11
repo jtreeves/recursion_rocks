@@ -6,10 +6,9 @@
 def find_max(l):
     if len(l) == 1:
         return l[0]
-    if l[0] > find_max(l[1:]):
+    elif l[0] > find_max(l[1:]):
         return l[0]
-    else:
-        return find_max(l[1:])
+    return find_max(l[1:])
 
 print(find_max([1, 4, 45, 6, -50, 10, 2]))
 # => 45
