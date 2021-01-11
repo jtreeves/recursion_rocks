@@ -4,10 +4,14 @@
 # This function returns the largest number in a given array.
 
 def find_max(l):
-    for i in l:
-        if i > l[0]:
-            l.insert(0, i)
-    return l[0]
+    maximum = l[0]
+    for i in range(len(l)):
+        if l[i] > maximum:
+            maximum = l[i]
+        else:
+            break
+        find_max(i + 1)
+    return maximum
 
 print(find_max([1, 4, 45, 6, -50, 10, 2]))
 # => 45
