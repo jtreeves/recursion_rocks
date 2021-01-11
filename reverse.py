@@ -7,13 +7,13 @@ def reverse(ss):
     # Write code here
     pass
 
-# print(reverse("")) 
+print(reverse("")) 
 # => ""
-# print(reverse("a")) 
+print(reverse("a")) 
 # => "a"
-# print(reverse("ab")) 
+print(reverse("ab")) 
 # => "ba"
-# print(reverse("computer")) 
+print(reverse("computer")) 
 # => "retupmoc"
-# print(reverse(reverse("computer"))) 
+print(reverse(reverse("computer"))) 
 # => "computer"

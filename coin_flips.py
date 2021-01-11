@@ -10,5 +10,9 @@ def coin_flips(n):
     # Write code here
     pass
 
-# print(coinFlips(2)) 
+print(coinFlips(1)) 
+# => ["H", "T"]
+print(coinFlips(2)) 
 # => ["HH", "HT", "TH", "TT"]
+print(coinFlips(3)) 
+# => ["HHH", "HHT", "HTH", "HTT", "THH", "THT", "TTH", "TTT"]
