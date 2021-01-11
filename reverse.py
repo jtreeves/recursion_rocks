@@ -4,12 +4,10 @@
 # Write a recursive function called `reverse` that accepts a ss and returns a reversed ss.
 
 def reverse(ss):
-    original_list = list(ss)
-    reversed_list = []
-    for letter in original_list:
-        reversed_list.insert(0, letter)
-    reversed_string = ''.join(reversed_list)
-    return reversed_string
+    if len(ss) <= 1:
+        return ss
+    else:
+        return reverse(ss[1:]) + ss[0]
 
 print(reverse("")) 
 # => ""
