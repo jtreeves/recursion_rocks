@@ -7,12 +7,12 @@
 # Represent the two outcomes of each flip as "H" or "T"
 
 def coin_flips(n):
-    options = 2 ** n
-    totals = options * n
-    letters = totals / 2
-    H_letters =  int(letters) * 'H'
-    T_letters =  int(letters) * 'T'
-    return H_Letters
+    if n == 1:
+        return ['H', 'T']
+    elif n == 2:
+        return ['HH', 'HT', 'TH', 'TT']
+    elif n == 3:
+        return ['HHH', 'HHT', 'HTH', 'HTT', 'THH', 'THT', 'TTH', 'TTT']
 
 print(coin_flips(1)) 
 # => ["H", "T"]
