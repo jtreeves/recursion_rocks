@@ -3,19 +3,20 @@
 
 # Write a recursive function called `reverse` that accepts a ss and returns a reversed ss.
 
-def reverse(ss):
-    if len(ss) <= 1:
-        return ss
-    else:
-        return reverse(ss[1:]) + ss[0]
+def reverse(input, output):
+    if len(input) == 0:
+        return output
+    new_output = input[0] + output
+    new_input = input[1:]
+    return reverse(new_input, new_output)
 
-print(reverse("")) 
-# => ""
-print(reverse("a")) 
-# => "a"
-print(reverse("ab")) 
-# => "ba"
-print(reverse("computer")) 
-# => "retupmoc"
-print(reverse(reverse("computer"))) 
-# => "computer"
+print(reverse('', '')) 
+# => ''
+print(reverse('a', '')) 
+# => 'a'
+print(reverse('ab', '')) 
+# => 'ba'
+print(reverse('computer', '')) 
+# => 'retupmoc'
+print(reverse(reverse('computer', ''), '')) 
+# => 'computer'
