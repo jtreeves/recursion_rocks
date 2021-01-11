@@ -13,25 +13,26 @@ def pretty_print(dictionary, indent, level = 1):
     for key in dictionary:
         value = dictionary[key]
         if type(value) is dict:
+            print(f'{indent*level}{key}:')
             pretty_print(value, indent, level + 1)
         else:
-            return f'{indent*level}{key}: {value}\n'
+            print(f'{indent*level}{key}: {value}')
 
 o1 = {"a": 1, "b": 2}
 o2 = {"a": 1, "b": 2, "c": {"name": "Bruce Wayne", "occupation": "Hero"}, "d": 4}
 o3 = {"a": 1, "b": 2, "c": {"name": "Bruce Wayne", "occupation": "Hero", "friends": {"spiderman": {"name": "Peter Parker"}, "superman": {"name": "Clark Kent"}}}, "d": 4}
 
-print(pretty_print(o1, "-"))
+pretty_print(o1, "-")
 # -a: 1
 # -b: 2
-print(pretty_print(o2, " "))
+pretty_print(o2, " ")
 #  a: 1
 #  b: 2
 #  c:
 #   name: Bruce Wayne
 #   occupation: Hero
 #  d: 4
-print(pretty_print(o3, ".."))
+pretty_print(o3, "..")
 # ..a: 1
 # ..b: 2
 # ..c:
