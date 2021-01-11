@@ -10,11 +10,9 @@ def fib(n):
         raise TypeError('Input must be an integer')
     elif n < 1:
         return 0
-    elif n == 1:
+    elif n <= 2:
         return 1
-    elif n == 2:
-        return 1
-    elif n > 2:
+    else:
         return fib(n - 1) + fib(n - 2)
 
 print(fib(-1))
@@ -27,3 +25,7 @@ print(fib(2))
 # => 1
 print(fib(7))
 # => 13
+print(fib(10))
+# => 55
+print(fib('ten'))
+# => TypeError: Input must be an integer
