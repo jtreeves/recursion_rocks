@@ -9,8 +9,7 @@ def find_max(l):
         if l[i] > maximum:
             maximum = l[i]
         else:
-            break
-        find_max(i + 1)
+            find_max(i + 1)
     return maximum
 
 print(find_max([1, 4, 45, 6, -50, 10, 2]))
