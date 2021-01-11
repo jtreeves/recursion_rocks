@@ -9,10 +9,10 @@
 def coin_flips(n):
     if n == 1:
         return ['H', 'T']
-    elif n == 2:
-        return ['HH', 'HT', 'TH', 'TT']
-    elif n == 3:
-        return ['HHH', 'HHT', 'HTH', 'HTT', 'THH', 'THT', 'TTH', 'TTT']
+    flipped = coin_flips(n - 1)
+    history_plus_heads = map(lambda el: el + 'H', flipped)
+    history_plus_tails = map(lambda el: el + 'T', flipped)
+    return history_plus_heads + history_plus_tails
 
 print(coin_flips(1)) 
 # => ["H", "T"]
@@ -20,3 +20,13 @@ print(coin_flips(2))
 # => ["HH", "HT", "TH", "TT"]
 print(coin_flips(3)) 
 # => ["HHH", "HHT", "HTH", "HTT", "THH", "THT", "TTH", "TTT"]
+
+# DIFFERENCE BETWEEN PYTHON AND JAVASCRIPT WITH ANONYMOUS FUNCTIONS
+
+# Python:
+# map(lambda el: el + 'H', history)
+
+# JavaScript:
+# history.map((el) => {
+#     return el + 'H'
+# })
