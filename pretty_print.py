@@ -9,9 +9,15 @@
 # pretty_print(inner_dictionary, indent + '..');
 # ...
 
-def pretty_print(dictionary, indent):
-    for item in dictionary:
-        print(f'{item}: {dictionary[item]}')
+def pretty_print(dictionary, indent, level = 1):
+    pretty = ''
+    for key in dictionary:
+        value = dictionary[key]
+        if type(value) != dict:
+            pretty += f'{indent*level}{key}: {value}\n'
+        else:
+            pretty +=  f'{indent*level}{key}: \n' + pretty_print(value, indent, level + 1)
+    return pretty
 
 o1 = {"a": 1, "b": 2}
 o2 = {"a": 1, "b": 2, "c": {"name": "Bruce Wayne", "occupation": "Hero"}, "d": 4}
