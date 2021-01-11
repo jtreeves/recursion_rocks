@@ -6,9 +6,7 @@
 # For this function, the first two fibonacci numbers are 1 and 1
 
 def fib(n):
-    if type(n) != int:
-        raise TypeError('Input must be an integer')
-    elif n < 1:
+    if n < 1:
         return 0
     elif n <= 2:
         return 1
@@ -27,5 +25,3 @@ print(fib(7))
 # => 13
 print(fib(10))
 # => 55
-print(fib('ten'))
-# => TypeError: Input must be an integer
