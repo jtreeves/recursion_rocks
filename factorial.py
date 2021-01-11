@@ -4,10 +4,9 @@
 # This function returns the factorial of a given number.
 
 def factorial(n):
-    if n > 0:
-        return n * factorial(n - 1)
-    else:
+    if n == 0:
         return 1
+    return n * factorial(n - 1)
 
 print(factorial(0))
 # => 1
