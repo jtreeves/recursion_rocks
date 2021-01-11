@@ -7,7 +7,7 @@ def factorial(n):
     if type(n) != int or n < 0:
         raise TypeError('Input needs to be a whole number')
     elif n > 0:
-        return n * factorial(n-1)
+        return n * factorial(n - 1)
     else:
         return 1
 
